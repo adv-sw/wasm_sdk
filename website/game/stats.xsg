@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xsg version="0.99">
+	<scene>
+		<node id="score" transform="1 0 0 0 1 0 0 0 1 -150 0 0">
+			<object type="emitter">
+				<emit speed="0" limit="2000" rate="0" text="Score : 0">
+					<object src="font.xsg">
+						<material id="main" cull="0"/>
+					</>
+				</emit>
+			</>
+		</>
+	</>
+</>

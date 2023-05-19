@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xsg version="0.99">
+	<scene>
+		<node>
+			<object type="emitter">
+				<emit delay="1" speed="30" life="6" limit="50" rate="3" text="    Attack of the mutant cubes !  Press left mouse button to play ...  ">
+					<object src="font.xsg">
+						<material id="main" cull="0"/>
+					</object>
+				</emit>
+			</object>
+		</node>
+	</scene>
+</xsg>
