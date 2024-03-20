@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 
 rem ===============        <><> Infinity Web Assembly SDK makefile (batch file for now)
 
@@ -45,5 +45,5 @@ set LIBS= %WASI_LIB%\libc.a  %WASI_LIB%\libc++abi.a   %WASI_LIB%\libc++.a
 rem ======= Install =======
 
 rem Push to distribution ...
-copy .\obj\app.wasm ..\..\website\simple\_action
+copy .\obj\app.wasm ..\..\website\simple\_action > nul
 

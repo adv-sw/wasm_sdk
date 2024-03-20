@@ -2,7 +2,7 @@
 
    Project     : <><> XSG/connect : 3D Web DOM/Web Assembly Secure Interface.
 
-        Copyright � 2002 - 2023, Advance Software Limited. All Rights Reserved.
+        Copyright � 2002 - 2024, Advance Software Limited. All Rights Reserved.
 
    BSD Licensed.
 
@@ -45,6 +45,11 @@ public:
       m_type = type;
    }
    
+   void *Interface(uint32_t type)
+   {
+       return (m_type == type) ? this : nullptr;
+   }
+   
    void SetParameter(const char *id, const char *value)
    { 
       uint_ptr data[2];
@@ -52,6 +57,47 @@ public:
       data[1] = (uint_ptr) value;
       
       native_op(m_type, (uint32_t) Attachment_Op::SetParameter, m_handle, (uint_ptr) data);
+   }
+};
+
+
+class Mesh : public Attachment
+{
+public:
+   Mesh(uint32_t handle) : Attachment(handle)
+   {
+      m_type = Type_Mesh;
+   }
+   
+   uint32_t GetVertexCount()
+   { 
+      return native_op(m_type, (uint32_t) Mesh_Op::GetVertexCount, m_handle, (uint_ptr) nullptr);
+   }
+   
+   void GetVertexPosition(uint32_t index, Vector3 &dest)
+   { 
+      uint_ptr data[2];
+      data[0] = (uint_ptr) index;
+      data[1] = (uint_ptr) &dest;
+      
+      native_op(m_type, (uint32_t) Mesh_Op::GetVertexPosition, m_handle, data);
+   }
+   
+   void SetVertexPosition(uint32_t index, const Vector3 &dest)
+   { 
+      uint_ptr data[2];
+      data[0] = (uint_ptr) index;
+      data[1] = (uint_ptr) &dest;
+      
+      native_op(m_type, (uint32_t) Mesh_Op::SetVertexPosition, m_handle, data);
+   }
+   
+   void Evaluate(uint32_t hints=0)  // Recalculate normals, bounding volumes.
+   { 
+      uint_ptr data;
+      data = (uint_ptr) hints;
+      
+      native_op(m_type, (uint32_t) Mesh_Op::Evaluate, m_handle, nullptr);
    }
 };
 

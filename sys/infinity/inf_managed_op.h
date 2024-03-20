@@ -2,7 +2,7 @@
 
 Project     : <><> XSG/connect : 3D Web DOM/Web Assembly Secure Interface.
 
-              Copyright � 2002 - 2023, Advance Software Limited. All Rights Reserved.
+              Copyright � 2002 - 2024, Advance Software Limited. All Rights Reserved.
 
               BSD Licensed.
 
@@ -31,6 +31,6 @@ enum class Animation_Op { Delete=0, GetDuration = 1 };
 enum class Attachment_Op { Delete=0, SetParameter = 1 }; 
 enum class Object_Op { Delete=0, SetParameter = 1, SetGeometry, GetGeometry, Intersection, SetAnimationPlaybackOffset };
 enum class Node_Op   { Delete=0, SetParameter = 1, SetPosition, GetPosition, Disconnect, SetVelocity, GetAttachment };
-
+enum class Mesh_Op   { Delete=0, SetParameter = 1, GetVertexCount, GetVertexPosition, SetVertexPosition, Evaluate };
 
 #endif // INF_MANAGED_OP_H

@@ -46,5 +46,5 @@ set LIBS= %WASI_LIB%\libc.a  %WASI_LIB%\libc++abi.a   %WASI_LIB%\libc++.a
 rem ======= Install =======
 
 rem Push to distribution ...
-copy .\obj\app.wasm ..\..\website\particles\_action
+copy .\obj\app.wasm ..\..\website\particles\_action > nul
 

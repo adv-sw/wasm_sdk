@@ -1,3 +1,5 @@
+@echo off
+
 rem ===============        <><> Infinity Web Assembly SDK makefile (batch file for now)
 
 rem Debug build
@@ -46,4 +48,4 @@ rem wasm2wat ./obj/app.wasm > ./obj/app.wat
 rem ======= Install =======
 
 rem push wasm binary into appropriate website directory for execution.
-copy .\obj\app.wasm ..\..\website\visualize\doodle\_action
+copy .\obj\app.wasm ..\..\website\visualize\doodle\_action > nul

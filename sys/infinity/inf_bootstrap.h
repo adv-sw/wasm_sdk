@@ -2,7 +2,7 @@
 
 Project     : <><> XSG/connect : 3D Web DOM/Web Assembly Secure Interface.
 
-              Copyright � 2002 - 2023, Advance Software Limited. All Rights Reserved.
+              Copyright � 2002 - 2024, Advance Software Limited. All Rights Reserved.
 
               BSD Licensed.
 

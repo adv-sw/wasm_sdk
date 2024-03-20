@@ -5,7 +5,7 @@
 //
 //-----------------------------------------------------------------------------------------------
 
-/* Copyright (c) 2020-2023, Advance Software Limited. All rights reserved.
+/* Copyright (c) 2020-2024, Advance Software Limited. All rights reserved.
 
 Based on code by DJ Katy.
 

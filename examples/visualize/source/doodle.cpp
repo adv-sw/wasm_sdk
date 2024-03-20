@@ -6,7 +6,7 @@
 //
 //-----------------------------------------------------------------------------------------------
 
-/* Copyright (c) 2020-2023, Advance Software Limited. All Rights Reserved.
+/* Copyright (c) 2020-2024, Advance Software Limited. All Rights Reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification are permitted provided that the following conditions are met :
