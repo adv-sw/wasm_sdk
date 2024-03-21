@@ -1,3 +1,4 @@
+@echo off
 cd source
-..\..\..\tools\lldbg -- infinity.exe #ui=0 #desktop #g ..\..\..\website\particles 
+..\..\..\tools\lldbg > nul  -- infinity.exe #ui=0 #desktop #g ..\..\..\website\particles 
 cd ..
