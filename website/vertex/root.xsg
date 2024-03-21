@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xsg version="0.99">
+
+	<scene id="Scripting tutorial" ambient="0.2 0.2 0.2" aspect="1.77">
+		<action type="wasm" src="app.wasm"/>
+
+		<node id="my_light" transform="0.649226 0 -0.760595 0.214918 0.959248 0.183449 0.729599 -0.282565 0.622769 -160 75 -100">
+			<light color="1 1 1" param="shadow:1" type="spot" inner="58" outer="60" begin="50" end="500"/>
+		</>
+		
+		<node id="my_cam" position="0 0 -20">
+			<camera/>
+		</>
+		
+	</scene>
+</xsg>
