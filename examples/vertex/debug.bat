@@ -1,4 +1,4 @@
 @echo off
 cd source
-..\..\..\tools\lldbg > nul -- infinity.exe #ui=0 #desktop #g ..\..\..\website\vertex 
+..\..\..\tools\lldbg -- infinity.exe #ui=0 #desktop #g ..\..\..\website\vertex 
 cd ..
