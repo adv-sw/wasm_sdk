@@ -8,9 +8,13 @@
 			<light color="1 1 1" param="shadow:1" type="spot" inner="58" outer="60" begin="50" end="500"/>
 		</>
 		
-		<node id="my_cam" position="0 0 -20">
+		<node id="my_cam" position="0 1 -15">
 			<camera/>
 		</>
 		
+      <node id="floor" position="0 0 0">
+			<object src="ground.xsg"/>
+		</>
+      
 	</scene>
 </xsg>
