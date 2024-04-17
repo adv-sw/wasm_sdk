@@ -8,6 +8,8 @@ EXTRA_COMPILE_OPTIONS=-g
 
 # ======= Configure =======
 
+set DEST_DIR=../../website/vertex/_action
+
 # WASI delivers standard c/c++ runtime libraries
 # Latest wasi-sdk here : https://github.com/WebAssembly/wasi-sdk/releases
 # Docs : https://wasi.dev
@@ -50,7 +52,8 @@ wasm-ld $LINK_OPTIONS  $LIBS ./obj/app.o  -o ./obj/app.wasm
 # ======= Install =======
 
 # push wasm binary into appropriate website directory for execution.
-cp ./obj/app.wasm ../../website/simple/_action
+if not exist %DEST_DIR% mkdir %DEST_DIR%
+cp ./obj/app.wasm %DEST_DIR%
 
 
 
