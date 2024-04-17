@@ -14,7 +14,7 @@ rem WASI delivers standard c/c++ runtime libraries & WASM tools.
 rem Latest wasi-sdk here : https://github.com/WebAssembly/wasi-sdk/releases
 rem Docs : https://wasi.dev
 
-set WASM_SDK=../../
+set WASM_SDK=../..
 set COPY=call "%WASM_SDK%/bat/copy.bat"
 
 set LLVM_H=%WASM_SDK%/sys/include

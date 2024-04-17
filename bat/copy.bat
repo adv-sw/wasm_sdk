@@ -10,4 +10,4 @@ set "FIX_1=%FIX_1:/=\%"
 set "FIX_2=%FIX_2:/=\%"
 
 rem echo copy %FIX_1% %FIX_2%
-copy %FIX_1% %FIX_2%
+copy %FIX_1% %FIX_2% > nul
