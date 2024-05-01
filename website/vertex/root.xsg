@@ -12,7 +12,7 @@
 			<camera/>
 		</>
 		
-      <node id="floor" position="0 0 0">
+      <node id="floor" position="0 -1 0">
 			<object src="ground.xsg"/>
 		</>
       
