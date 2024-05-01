@@ -40,6 +40,7 @@ public:
       
       m_target = (Mesh*) n->GetAttachment();
       
+      m_last_change_time = -1.0f;
       
       // Clean up
       delete scene;
@@ -57,19 +58,35 @@ public:
    
       if (m_target)
       {
-         const float magnitude = 3.0f;
-         float speed = 5.0;  
+         const float magnitude = 1.0f;
+         float speed = 10.0;  
          float angle = speed * current_time;
          
-         for (int i=2; i<4; i++)
+         int i = m_current_vertex;
+         //for (int i=; i<4; i++)
          {
             Vector3 p;
             m_target->GetVertexPosition(i, p);
             p.y = fabs(sin(angle)) * magnitude;
             m_target->SetVertexPosition(i, p);
          }
-      }   
-    
+      }
+      
+      const float change_period = 1.0f;
+      
+      if (m_last_change_time < 0)
+         m_last_change_time = current_time;
+      else if ( (current_time - m_last_change_time) > change_period)
+      {
+         m_last_change_time = current_time;
+         Vector3 p;
+         m_target->GetVertexPosition(m_current_vertex, p);
+         p.y = 0.0f;
+         m_target->SetVertexPosition(m_current_vertex, p);
+         
+         m_current_vertex++;
+      }
+         
       return 1;
    }
    
@@ -85,6 +102,9 @@ public:
    
    Node *m_item_node;
    Mesh *m_target;
+   
+   uint32_t m_current_vertex;
+   float m_last_change_time;
 };
 
 
