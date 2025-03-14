@@ -2,7 +2,7 @@
 
 Project     : <><> XSG/connect : 3D Web DOM/Web Assembly Secure Interface.
 
-              Copyright � 2002 - 2024, Advance Software Limited. All Rights Reserved.
+              Copyright � 2002 - 2025, Advance Software Limited. All Rights Reserved.
 
               BSD Licensed.
 
@@ -19,7 +19,7 @@ Description : DOM class interop.
 
 enum class Zone_Op { GetScene = 1, FindSceneGraph, Loading };
 enum class SceneGraph_Op { Delete=0, CreateNode = 1, CreateObject, GetRoot, FindMaterial, FindNode, GetAnimation };
-enum class Material_Op { Delete=0, GetPart = 1, GetColour, SetColour };
+enum class Material_Op { Delete=0, GetPart = 1, GetColour, SetColour, Hint };
 enum class Material_Part_Op { Delete=0, GetInput = 1 };
 enum class Mixer_Input_Op { Delete=0, SetScale = 1, SetOffset };
 enum class Diagnostics_Op { Log = 1, Get };
