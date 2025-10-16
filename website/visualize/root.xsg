@@ -1,31 +1,27 @@
 <?xml version="1.0"?>
 <xsg version="0.991">
 	<scene ambient="0.25098 0.313726 0.25098">
-		
 		<sound id="ambient" src="./music.mp3" begin="1"/>
-
-		<node scale="1 1 0.5" id="[xref:arena]">
-			<object src="./arena.xsg"/>
+		<node id="FDirect01" transform="0.95754 0 -0.288302   0.211116 0.681009 0.701182   0.196336 -0.732275 0.652093   -33.462864 98.896057 -64.473663">
+			<light color="0.403922 0.403922 0.403922" param="shadow:1" inner="58" outer="60" begin="40" end="150"/>
 		</node>
-		<node id="[xref:plinth]">
-			<object src="./plinth.xsg"/>
+		<node id="Fspot02" transform="0.750025 0.202172 -0.629749   0.171494 0.860128 0.48038   0.638786 -0.468297 0.610447   -3.691065 3.413801 -7.275533">
+			<light color="0.572549 0.580392 0.054902" param="shadow:0" type="spot" inner="43" outer="90" begin="1" end="20"/>
 		</node>
-		<node id="Camera01" transform="0.991956 0 -0.126584   0 1 0   0.126584 0 0.991956   -2.397331 5.018885 -14.868141">
-			<camera/>
+		<node id="Fspot01" transform="0.937584 0 0.347759   0.126922 0.931019 -0.34219   -0.32377 0.36497 0.872909   3.390693 0.347761 -8.530083">
+			<light color="0.592157 0.047059 0.627451" param="shadow:0" type="spot" inner="43" outer="90" begin="20" end="20"/>
 		</node>
 		<node id="doodle" transform="1 0 0   0 1 0   0 0 1   0 0.01 0">
 			<object src="./doodle/root.xsg"/>
 		</node>
-		
-		<node id="Fspot01" transform="0.937584 0 0.347759   0.126922 0.931019 -0.34219   -0.32377 0.36497 0.872909   3.390693 0.347761 -8.530083">
-			<light color="0.592157 0.047059 0.627451" param="shadow:0" type="spot" inner="43" outer="90" begin="20" end="20"/>
+		<node id="Camera01" transform="0.991956 0 -0.126584   0 1 0   0.126584 0 0.991956   -2.397336 1.7 -14.868171">
+			<camera/>
 		</node>
-		<node id="Fspot02" transform="0.887056 0 -0.461662   -0.162772 0.935782 -0.312757   0.432015 0.352579 0.830091   -4.961084 0.273575 -7.113479">
-			<light color="0.572549 0.580392 0.054902" param="shadow:0" type="spot" inner="43" outer="90" begin="1" end="20"/>
+		<node id="[xref:plinth]">
+			<object src="./plinth.xsg"/>
 		</node>
-		<node id="FDirect01" transform="0.95754 0 -0.288302   0.211116 0.681009 0.701182   0.196336 -0.732275 0.652093   -33.462864 98.896057 -64.473663">
-			<light color="0.403922 0.403922 0.403922" param="shadow:1" inner="58" outer="60" begin="40" end="150"/>
+		<node id="[xref:arena]" transform="1 0 0   0 1 0   0 0 0.5   0 0 0">
+			<object src="./arena.xsg"/>
 		</node>
-		
 	</scene>
 </xsg>

@@ -1,1 +1,1 @@
-lldb requires python 3.10 to be installed.
+lldb requires python scripting - disabled current build.
