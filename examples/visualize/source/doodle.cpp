@@ -6,7 +6,7 @@
 //
 //-----------------------------------------------------------------------------------------------
 
-/* Copyright (c) 2020-2024, Advance Software Limited. All Rights Reserved.
+/* Copyright (c) 2020-2025, Advance Software Limited. All Rights Reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification are permitted provided that the following conditions are met :
@@ -83,6 +83,7 @@ public:
        if (m)
        {
            Log("Got mtl");
+		   m->Hint(Material_Hint_Dynamic);  // This material changes frequently.
 
            auto mp = m->GetPart(0); ; // 0=diffuse. TODO: use enum or define
 

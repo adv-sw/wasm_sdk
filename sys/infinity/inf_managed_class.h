@@ -2,7 +2,7 @@
 
    Project     : <><> XSG/connect : 3D Web DOM/Web Assembly Secure Interface.
 
-        Copyright � 2002 - 2024, Advance Software Limited. All Rights Reserved.
+        Copyright � 2002 - 2025, Advance Software Limited. All Rights Reserved.
 
    BSD Licensed.
 
@@ -178,7 +178,11 @@ public:
    }
 };
    
-   
+
+const uint32_t Material_Hint_Default = 0;
+const uint32_t Material_Hint_Dynamic = 1;
+const uint32_t Material_Hint_Change  = 2;
+
 class Material : public Managed
 {
 public:
@@ -200,6 +204,11 @@ public:
    void SetColour(const Vector3 &c)
    {
       native_op(m_type, (uint32_t) Material_Op::SetColour, m_handle, (uint_ptr) &c);
+   }
+
+   void Hint(uint32_t hint_id)
+   {
+      native_op(m_type, (uint32_t) Material_Op::Hint, m_handle, (uint_ptr) hint_id);
    }
 };
 
