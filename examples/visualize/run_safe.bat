@@ -4,4 +4,4 @@ rem ===============        <><> Infinity Secure Programming Environment SDK run 
 
 rem ======= Run =======
 
-infinity.exe -alone -desktop -ui=0  %cd%\..\..\website\visualize
+infinity.exe -alone -desktop -ui=0  ..\..\website\visualize
