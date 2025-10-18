@@ -83,7 +83,7 @@ public:
        if (m)
        {
            Log("Got mtl");
-		   m->Hint(Material_Hint_Dynamic);  // This material changes frequently.
+           m->Hint(Material_Hint_Dynamic);  // This material changes frequently.
 
            auto mp = m->GetPart(0); ; // 0=diffuse. TODO: use enum or define
 
