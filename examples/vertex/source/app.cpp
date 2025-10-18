@@ -54,11 +54,11 @@ public:
 
    virtual uint32_t Process(float current_time)
    {
-      // Move the object ...
+      // Move the vertex ...
    
       if (m_target)
       {
-         const float magnitude = 1.0f;
+         const float magnitude = 5.0f;
          float speed = 10.0;  
          float angle = speed * current_time;
          
