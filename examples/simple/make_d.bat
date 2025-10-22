@@ -3,7 +3,7 @@
 rem ===============        <><> Infinity Web Assembly SDK makefile (batch file for now)
 
 rem Debug build
-set EXTRA_COMPILE_OPTIONS=-g -D__wasi__
+set EXTRA_COMPILE_OPTIONS=-g -O0 -D__wasi__ -fno-inline
 
 
 rem ======= Configure =======
@@ -30,10 +30,11 @@ rem ======= Compile =======
 
 if not exist obj mkdir obj
 
-%CPP% %HEADERS% %COMPILE_OPTIONS% ./source/app.cpp  -o ./obj/app.o 
+%CPP% %HEADERS% %COMPILE_OPTIONS% ./source/app.cpp  -o ./obj/app.o
 
 
 rem ======= Link =======
+
 
 
 set LINK_OPTIONS=--no-entry --allow-undefined --export=app_init --export=app_process --export=app_terminate --export=app_move --export=app_msg --export=app_button
